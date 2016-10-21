@@ -4,36 +4,37 @@
 // 生成action creator
 function makeActionCreator(type, ...argNames) {
     return function (...args) {
-        let action = {type};
-        argNames.forEach((arg, index)=> {
+        let action = {
+            type
+        };
+        argNames.forEach((arg, index) => {
             action[argNames[index]] = args[index]
         });
         return action
     }
 }
 
-/**
- * action 类型
- * @type {string}   类型
- */
-export const SELECT_TAB = 'SELECT_TAB';
+//action类型
+export const types = {
+    SELECT_TAB: 'SELECT_TAB'
+};
 
 export const PageFilters = {
-    PAGE_MENU:'分类',
-    PAGE_DISCOVERY:'发现',
-    PAGE_SEARCH:'搜索'
+    PAGE_MENU: '分类',
+    PAGE_DISCOVERY: '发现',
+    PAGE_SEARCH: '搜索'
 };
 
 //action 创建函数
 
 /**
  * 选择底部tab
- * @param tilte
+ * @param title 选择的标题
  * @returns {{type: string, title: (string|string)}}
  */
-export function selectTabAction(tilte) {
+export function selectTabAction(title) {
     return {
-        type: SELECT_TAB,
-        title:tilte
+        type: types.SELECT_TAB,
+        title: title
     }
 }
