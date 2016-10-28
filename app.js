@@ -1,15 +1,22 @@
 /**
  * Created by  on 2016/10/21.
  */
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
+    View,
     Navigator,
     BackAndroid,
     Platform,
+    StatusBar,
 } from 'react-native';
+import {
+    dark_primary_color
+} from './app/values/color.js'
 import Main from './app/page/main/main.js'
 import List from './app/page/list.js'
-import {NavigatorName} from './app/values/const.js'
+import Content from './app/page/content.js' 
+import Result from './app/page/result.js' 
+import { NavigatorName } from './app/values/const.js'
 
 export default class App extends Component {
 
@@ -27,10 +34,16 @@ export default class App extends Component {
             case NavigatorName.List:
                 Component = List;
                 break;
+            case NavigatorName.Content:
+                Component = Content;
+                break;
+            case NavigatorName.Result:
+                Component = Result;
+                break;
             default:
                 Component = Main;
         }
-        return <Component {...router.params} navigator={navigator}/>
+        return <Component {...router.params} navigator={navigator} />
     }
 
     componentDidMount() {
@@ -55,11 +68,14 @@ export default class App extends Component {
 
     render() {
         return (
-            <Navigator
-                initialRoute={{name: NavigatorName.Main}}
-                configureScene={this._configureScene}
-                renderScene={this._renderScene.bind(this)}
-            />
+            <View style={{ flex: 1 }}>
+                <StatusBar backgroundColor={dark_primary_color} />
+                <Navigator
+                    initialRoute={{ name: NavigatorName.Main }}
+                    configureScene={this._configureScene}
+                    renderScene={this._renderScene.bind(this)}
+                    />
+            </View>
         );
     }
 }

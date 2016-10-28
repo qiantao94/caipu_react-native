@@ -1,5 +1,5 @@
 {
-  "name": "caipu",
+  "name": "caipuRN",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
   "dependencies": {
     "react": "15.3.2",
     "react-native": "0.35.0",
+    "react-native-scrollable-tab-view": "^0.6.0",
     "react-redux": "^4.4.5",
     "redux": "^3.6.0",
     "redux-devtools": "^3.3.1",

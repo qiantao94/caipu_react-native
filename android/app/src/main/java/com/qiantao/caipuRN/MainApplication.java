@@ -1,4 +1,4 @@
-package com.caipu;
+package com.qiantao.caicaiRN;
 
 import android.app.Application;
 import android.util.Log;
