@@ -12,7 +12,7 @@ import {
     Image,
     StyleSheet,
     Modal,
-    ProgressBarAndroid
+    ActivityIndicator
 } from 'react-native'
 import Button from '../../componet/Button.js'
 import { default_primary_color } from '../../values/color.js'
@@ -32,8 +32,8 @@ export default class Search extends Component {
     }
 
     _onSearchPress() {
-        dismissKeyboard();
         if (this.state.text == '' || this.state.text == null) return;
+        dismissKeyboard();
         this.setState({
             fetchNull: false,
             modalVisible: true
@@ -89,7 +89,7 @@ export default class Search extends Component {
                     onRequestClose={() => { } }>
                     <View style={styles.modal}>
                         <View style={styles.inner}>
-                            <ProgressBarAndroid indeterminate={false}  color={default_primary_color} style={styles.progressbar} />
+                            <ActivityIndicator animating={true} color={default_primary_color} style={styles.progressbar} size={'large'} />
                             <Text style={styles.modal_text}>{'正在搜索: ' + this.state.text}</Text>
                         </View>
                     </View>
