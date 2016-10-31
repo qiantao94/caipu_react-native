@@ -96,7 +96,7 @@ export default class Menu extends Component {
 
     render() {
         return (
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1, backgroundColor: white_color }}>
                 <ListView
                     style={{ flex: 1 }}
                     initialListSize={type_name.length}

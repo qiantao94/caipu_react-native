@@ -34,7 +34,7 @@ export default class ToolBar extends Component {
                 shadowColor: "#000000",
                 shadowRadius: 1,
                 shadowOffset: { height: 1, width: 0.3 },
-                shadowOpacity: 0.3
+                shadowOpacity: 0.3,
             }}>
                 {
                     isMain ?

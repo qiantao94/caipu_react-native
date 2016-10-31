@@ -80,12 +80,12 @@ export default class Main extends Component {
         });
     }
 
-    _goToResult(result,name) {
+    _goToResult(result, name) {
         this.props.navigator.push({
             name: NavigatorName.Result,
             params: {
                 result: result,
-                name:name
+                name: name
             }
         })
     }

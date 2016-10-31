@@ -15,7 +15,7 @@ import {
     ActivityIndicator
 } from 'react-native'
 import Button from '../../componet/Button.js'
-import { default_primary_color } from '../../values/color.js'
+import { default_primary_color,white_color } from '../../values/color.js'
 import { BASE_URL, NavigatorName } from '../../values/const.js'
 import dismissKeyboard from 'dismissKeyboard'
 
@@ -102,7 +102,8 @@ export default class Search extends Component {
 const styles = StyleSheet.create({
     main: {
         flexDirection: 'column',
-        flex: 1
+        flex: 1,
+        backgroundColor:white_color
     },
     search_view: {
         flexDirection: 'row',
