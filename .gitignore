@@ -32,11 +32,7 @@ local.properties
 # node.js
 #
 node_modules/
-typings/
-.vscode/
-jsconfig.json
-tsconfig.json
-typings.json
+
 npm-debug.log
 
 # BUCK
